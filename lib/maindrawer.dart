@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/contact_us.dart';
 import 'package:flutter_application_1/profile.dart';
@@ -17,10 +18,11 @@ class maindrawer extends StatelessWidget {
 
     return Drawer(
       child: Material(
-        color: Color.fromARGB(255, 255, 254, 240),
+        color: Colors.white,
         child: ListView(
           children: [
             DrawerHeader(
+              decoration: BoxDecoration(color: Colors.blue),
               margin: EdgeInsets.symmetric(vertical: 10),
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
@@ -33,7 +35,12 @@ class maindrawer extends StatelessWidget {
           ),
             
             ListTile(
-              title: const Text('Profile'),
+              leading: Icon(
+                CupertinoIcons.profile_circled,
+                color: Colors.blue,
+              ),
+              title: const Text('Profile',
+              style: TextStyle(color: Colors.blue,),),
               onTap: () {
                 Navigator.push(
               context,
@@ -41,17 +48,13 @@ class maindrawer extends StatelessWidget {
             );
               },
             ),
+
             ListTile(
-              title: const Text('Profile Settings'),
-              onTap: () {
-                Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => hello()),
-            );
-              },
-            ),
-            ListTile(
-              title: const Text('Settings'),
+              leading: Icon(
+                CupertinoIcons.gear,
+                color: Colors.blue,
+              ),
+              title: const Text('Settings', style: TextStyle(color: Colors.blue,),),
               onTap: () {
                 Navigator.push(
               context,
@@ -60,15 +63,21 @@ class maindrawer extends StatelessWidget {
               },
             ),
             ListTile(
-              title: const Text('Contact-Us'),
+              leading: Icon(
+                CupertinoIcons.phone_solid,
+                color: Colors.blue,
+              ),
+
+              title: const Text('Contact-Us', style: TextStyle(color: Colors.blue,),),
               onTap: () {},
             ),
             ListTile(
-              title: const Text('About-Us'),
-              onTap: () {},
-            ),
-            ListTile(
-              title: const Text('Log-in'),
+              leading: Icon(
+                CupertinoIcons.arrow_right,
+                color: Colors.blue,
+              ),
+              
+              title: const Text('Log-in', style: TextStyle(color: Colors.blue,),),
               onTap: () {
                 Navigator.push(
               context,
