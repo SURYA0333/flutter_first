@@ -38,7 +38,7 @@ class one_page extends StatelessWidget {
                     Column(
                       children: [
                         const Text(
-                          'Welcome test ',
+                          'Welcome',
                           style: const TextStyle(
                               fontSize: 50,
                               color: Color.fromARGB(255, 0, 0, 0)),
