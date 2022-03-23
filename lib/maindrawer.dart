@@ -6,13 +6,12 @@ import 'package:flutter_application_1/settings.dart';
 import 'login.dart';
 
 class maindrawer extends StatelessWidget {
-  final padding = const EdgeInsets.symmetric(horizontal: 20);
 
   get buildMenuItem => null;
       final name = 'G SURYA';
     final email = 'suryakrish343@gmail.com';
     final urlimage =
-        'https://www.google.com/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1339063090495717377%2FTpbIUpq8_400x400.jpg&imgrefurl=https%3A%2F%2Ftwitter.com%2Fsuryakr60168650&tbnid=cDhOqBrEm-6-uM&vet=12ahUKEwjHt9_ipLj2AhUmRGwGHfmmC4EQMygBegQIARBY..i&docid=M7vWplSroB0QqM&w=400&h=400&itg=1&q=suryakrish&ved=2ahUKEwjHt9_ipLj2AhUmRGwGHfmmC4EQMygBegQIARBY';
+        'https://pbs.twimg.com/profile_images/1339063090495717377/TpbIUpq8_400x400.jpg';
   @override
   Widget build(BuildContext context) {
 
@@ -20,9 +19,18 @@ class maindrawer extends StatelessWidget {
       child: Material(
         color: Color.fromARGB(255, 255, 254, 240),
         child: ListView(
-          padding: padding,
-          children: <Widget>[
-            const SizedBox(height: 40),
+          children: [
+            DrawerHeader(
+              margin: EdgeInsets.symmetric(vertical: 10),
+              padding: EdgeInsets.zero,
+              child: UserAccountsDrawerHeader(
+                accountName: Text(name),
+                accountEmail: Text(email) ,
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: NetworkImage(urlimage),
+                ),
+                ),
+          ),
             
             ListTile(
               title: const Text('Profile'),

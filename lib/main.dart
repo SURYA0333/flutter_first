@@ -7,17 +7,16 @@ void main() {
 }
 
 class Myapp extends StatelessWidget {
-  const Myapp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       theme: ThemeData(primarySwatch: Colors.amber),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
+      debugShowCheckedModeBanner: false,
       color: Color.fromARGB(255, 255, 255, 255),
       home: one_page(),
     );
