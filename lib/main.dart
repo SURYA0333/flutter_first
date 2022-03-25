@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Homepage.dart';
-import 'package:flutter_application_1/profile.dart';
+import 'package:flutter_application_1/pages/Homepage.dart';
+import 'package:flutter_application_1/pages/profile.dart';
 
 void main() {
   runApp(Myapp());
 }
 
 class Myapp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,7 +17,7 @@ class Myapp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       color: Color.fromARGB(255, 255, 255, 255),
-      home: one_page(),
+      home: Homepage(),
     );
   }
 }

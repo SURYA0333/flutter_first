@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/contact_us.dart';
-import 'package:flutter_application_1/profile.dart';
-import 'package:flutter_application_1/settings.dart';
+import 'package:flutter_application_1/pages/models_data.dart';
+import 'package:flutter_application_1/pages/profile.dart';
+import 'package:flutter_application_1/pages/settings.dart';
 
-import 'login.dart';
+import '../pages/login.dart';
 
 class maindrawer extends StatelessWidget {
 

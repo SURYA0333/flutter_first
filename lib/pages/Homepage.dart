@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/login.dart';
-import 'package:flutter_application_1/maindrawer.dart';
-import 'package:flutter_application_1/profile.dart';
+import 'package:flutter_application_1/pages/models_data.dart';
+import 'package:flutter_application_1/widget/maindrawer.dart';
 
 class Homepage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     final padding = const EdgeInsets.symmetric(horizontal: 20);
@@ -14,7 +12,6 @@ class Homepage extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 255, 255, 255),
         drawer: maindrawer(),
         extendBodyBehindAppBar: true,
-
         appBar: AppBar(
           elevation: 0.0,
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
@@ -32,4 +29,3 @@ class Homepage extends StatelessWidget {
     );
   }
 }
-

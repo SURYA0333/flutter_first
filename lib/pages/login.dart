@@ -1,7 +1,6 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/settings.dart';
+import 'package:flutter_application_1/pages/settings.dart';
+
 
 class login extends StatefulWidget {
   @override
@@ -20,7 +19,7 @@ class _loginState extends State<login> {
       setState(() {
         changebutton = true;
       });
-      await Future.delayed(Duration(milliseconds: 800));
+      await Future.delayed(const Duration(milliseconds: 800));
       await Navigator.push(
           context, MaterialPageRoute(builder: (context) => const hello()));
       setState(() {
@@ -75,68 +74,56 @@ class _loginState extends State<login> {
                           height: 60,
                           width: 20,
                         ),
-                        Material(
-                          elevation: 0,
-                          child: TextFormField(
-                            autofocus: false,
-                            decoration: const InputDecoration(
-                              enabledBorder: OutlineInputBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(40))),
-                              hintText: 'Enter your email or user-name',
-                              labelText: 'User-Name',
-                            ),
-                            onChanged: (value) {
-                              name = value;
-                              setState(() {});
-                            },
-                            validator: (value) {
-                              if (value!.isEmpty) {
-                                return "Username cannot be empty";
-                              }
-                              return null;
-                            },
+                        TextFormField(
+                          autofocus: false,
+                          decoration: const InputDecoration(
+                            hintText: 'Enter your email or user-name',
+                            labelText: 'User-Name',
                           ),
+                          onChanged: (value) {
+                            name = value;
+                            setState(() {});
+                          },
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return "Username cannot be empty";
+                            }
+                            return null;
+                          },
                         ),
                         const SizedBox(
                           height: 20,
                           width: 20,
                         ),
-                        Material(
-                          elevation: 0,
-                          child: TextFormField(
-                            autofocus: false,
-                            obscureText: true,
-                            decoration: const InputDecoration(
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(40)),
-                              ),
-                              hintText: 'Enter your password',
-                              labelText: 'Password',
-                            ),
-                            validator: (value) {
-                              if (value!.isEmpty) {
-                                return "password connat be empty";
-                              } else if (value.length <8) {
-                                return "password length must be atleast 8";
-                              }
-                              return null;
-                            },
+                        TextFormField(
+                          obscureText: true,
+                          autofocus: false,
+                          decoration: const InputDecoration(
+                            hintText: 'Enter your password',
+                            labelText: 'Password',
                           ),
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return "password connot be empty";
+                            }
+                            // else if (value) {
+                            //   return "password connot be empty";
+                            // }
+                            return null;
+                          },
                         ),
                         const SizedBox(
-                          height: 20,
+                          height: 60,
                           width: 20,
                         ),
                         InkWell(
                           onTap: () {
                             Navigator.push(context,
-                                MaterialPageRoute(builder: (context) => hello()));
+                                MaterialPageRoute(builder: (context) => const hello()));
                           },
-                          child: Text(
+                          child: const Text(
                             'Forget password?',
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Color.fromARGB(255, 17, 41, 255)),
                           ),
                         ),
@@ -145,28 +132,22 @@ class _loginState extends State<login> {
                           width: 20,
                         ),
                         Material(
-                          color: Color.fromARGB(255, 255, 0, 0),
+                          color: const Color.fromARGB(255, 255, 0, 0),
                           borderRadius:
-                              BorderRadius.circular(changebutton ? 100 : 30),
+                              BorderRadius.circular(changebutton ? 50 : 30),
                           child: InkWell(
                             onTap: () => movetoHomepage(),
                             child: Ink(
                               child: AnimatedContainer(
-                                duration: Duration(milliseconds: 500),
+                                duration: const Duration(milliseconds: 500),
                                 alignment: Alignment.center,
-                                width: changebutton ? 60 : 150,
+                                width: changebutton ? 50 : 150,
                                 height: changebutton ? 50 : 40,
                                 child: changebutton
-                                    ? Text(
-                                        'Done',
-                                        style: TextStyle(
-                                          color:
-                                              Color.fromARGB(255, 255, 255, 255),
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      )
-                                    : Text(
+                                    ? Icon(Icons.done,
+                                    color: Colors.white,
+                                    )
+                                    : const Text(
                                         'Login',
                                         style: TextStyle(
                                           color:

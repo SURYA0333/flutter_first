@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Homepage.dart';
+import 'package:flutter_application_1/pages/Homepage.dart';
 
 class one_page extends StatelessWidget {
   List img = [
