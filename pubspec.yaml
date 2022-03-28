@@ -62,10 +62,16 @@ flutter:
     -   images/logo.png
     -   images/login_icon1.png
     -   images/login_icon.png
-    -   images/apbg2.png
+    -   images/ap4.jpg
     -   images/apbg.jpg
     -   images/apbg1.jpg
-    -   images/jason
+    -   images/jason/resource.json
+    -   images/c1.jpg
+    -   images/c2.jpg
+    -   images/c3_1.jpg
+    -   images/c4_1.jpg
+    -   images/c5_1.jpg
+    -   images/
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

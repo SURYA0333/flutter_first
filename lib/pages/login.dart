@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/settings.dart';
+import 'package:flutter_application_1/pages/Homepage.dart';
 
 
 class login extends StatefulWidget {
@@ -21,7 +22,7 @@ class _loginState extends State<login> {
       });
       await Future.delayed(const Duration(milliseconds: 800));
       await Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const hello()));
+          context, MaterialPageRoute(builder: (context) => Homepage()));
       setState(() {
         changebutton = false;
       });

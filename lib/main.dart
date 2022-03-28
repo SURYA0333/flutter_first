@@ -17,7 +17,7 @@ class Myapp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       color: Color.fromARGB(255, 255, 255, 255),
-      home: Homepage(),
+      home: one_page(),
     );
   }
 }

@@ -1,11 +1,10 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/Homepage.dart';
+import 'package:flutter_application_1/pages/login.dart';
 
 class one_page extends StatelessWidget {
   List img = [
-    "apbg2.png",
+    "ap4.jpg",
     "apbg1.jpg",
     "apbg.jpg",
   ];
@@ -56,7 +55,8 @@ class one_page extends StatelessWidget {
                           width: 20,
                         ),
 
-                        ElevatedButton(onPressed: () {
+                        ElevatedButton(
+                          onPressed: () {
                           Navigator.push(context, MaterialPageRoute(builder: ((context) => Homepage() ) ));
                         }, child: const Text('Start'))
                       ],
